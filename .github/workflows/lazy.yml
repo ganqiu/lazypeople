@@ -1,0 +1,16 @@
+name: lazy
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-18.04  
+    defaults:
+     run: 
+         shell: bash    
+    steps:
+      - uses: actions/checkout@v2 #复制代码
+      - run: | 
+            ./lazy.sh
+       
